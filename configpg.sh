@@ -1,6 +1,5 @@
 #!/bin/bash
-rc-service postgresql setup
-rc-service postgresql start
+/etc/init.d/postgresql start
 su - postgres
 createuser -DRS gvm
 createdb -O gvm gvmd
