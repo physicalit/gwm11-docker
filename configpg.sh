@@ -1,4 +1,5 @@
 #!/bin/bash
+/etc/init.d/postgresql stop
 /etc/init.d/postgresql start
 exec sudo -u postgres /bin/sh - << 'EOF'
 createuser -DRS gvm
