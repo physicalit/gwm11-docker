@@ -1,6 +1,6 @@
-FROM alpine:latest
+FROM alpine:3.11
 
-MAINTAINER Sergiu
+MAINTAINER Mihuleac Sergiu <mihuleac.sergiu@gmail.com>
 
 #VOLUME [ “/sys/fs/cgroup” ]
 RUN apk update
