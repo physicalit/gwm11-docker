@@ -1,9 +1,9 @@
 FROM alpine:3.11
 
-VOLUME [ “/sys/fs/cgroup” ]
+VOLUME [ "/sys/fs/cgroup" ]
 RUN apk update
 RUN apk add openvas openvas-config gvmd gvm-libs greenbone-security-assistant ospd-openvas bash 
-RUN apk add openrc dos2unix sudo
+RUN apk add openrc dos2unix sudo tzdata
 
 COPY configgwm.sh /configgwm.sh
 COPY configpg.sh /configpg.sh

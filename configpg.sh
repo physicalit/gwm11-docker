@@ -1,5 +1,7 @@
 #!/bin/bash
-/etc/init.d/postgresql stop
+mkdir /run/openrc
+touch /run/openrc/softlevel
+/etc/init.d/postgresql setup
 /etc/init.d/postgresql start
 exec sudo -u postgres /bin/sh - << 'EOF'
 createuser -DRS gvm
